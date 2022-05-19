@@ -100,3 +100,47 @@ function draw_line_chart(chartdom_name, region_name, data_dict, pred_dict, title
 
     chart.setOption(option);
 }
+
+/*
+ * chartdom: document.getelementbyid(id)
+ * region_name: 'Shanghai', 'Changning' etc.
+ * data_dict: passed by flask ({{qz|safe}})
+ */
+function draw_line_chart_for_district(chartdom_name, region_name, data_dict, title) {
+    var chartdom = document.getElementById(chartdom_name);
+    var chart = echarts.init(chartdom);
+    var datas = data_dict[region_name];
+
+    option = {
+        title: {
+            text: title + " " + region_name + " ()",
+            left: 'center',
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+              type: 'cross',
+              label: {
+                backgroundColor: '#6a7985'
+              }
+            }
+        },
+        xAxis: {
+            type: "category",
+            boundaryGap: false,
+            data: days_to_strings(datas.length),
+        },
+        yAxis: {
+            type: "value",
+        },
+        series: [
+            {
+                data: datas,
+                type: "line",
+                areaStyle: {},
+            },
+        ],
+    };
+
+    chart.setOption(option);
+}

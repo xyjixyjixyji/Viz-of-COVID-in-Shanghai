@@ -42,6 +42,7 @@ def return_dictionaries():
         For external usage (in backend.py: index())
     '''
     region_qz, region_wzz = parse_regional_data(args)
+    print(region_qz.keys())
     pred_qz, pred_wzz = {}, {}
     for k, v in region_qz.items():
         pred_qz[k] = arima(v, fwd_date=args.fwd_date, key=k)

@@ -189,6 +189,18 @@
     color: #ffcc66;
 }
 
+/* ======================= */
+/* |                      |*/
+/* |      DISTRICTS       |*/
+/* |                      |*/
+/* ======================= */
+.charts {}
+
+.charts * {
+    float: left;
+    height: 25vh;
+    width: 33vw; /* depends on how many charts per line*/
+}
 
 /* ======================= */
 /* |                      |*/
