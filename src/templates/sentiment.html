@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- import echarts  -->
+        <script src="../static/js/echarts.js"></script>
+        <!-- import sentiment analysis js -->
+        <script src="../static/js/senti_js.js"></script>
+        <link type="text/css" rel="stylesheet" href="../static/css/style.css" />
+    </head>
+
+    <body>
+        <div id="sent">
+            <div class="overall">
+                <h1>全局舆情分析</h1>
+
+                <img id="word_cloud" src="../static/images/4_3.png" alt="加载失败">
+
+                <div id="emo_in_all" ></div>
+
+                <div id="box_line" ></div>
+            </div>
+
+            <div class="perday">
+                <h1>每日舆情分析</h1>
+
+                <select id="mylink"></select>
+
+                <input type="button" id="btn" value="显示" onclick="setsubmit(this)" /> 
+
+                <div id="word_count" ></div>
+
+                <div id="emo_daily" ></div>
+
+            </div>
+        </div>
+
+        <div class="top">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">全市信息概览</a>
+                    </li>
+
+                    <li>
+                        <a href="/sentiment" class="active">舆情分析</a>
+                    </li>
+
+                    <li>
+                        <a href="/district">全市分区统计数据</a>
+                    </li>
+
+                    <li style="float: right">
+                        <a class="active" href="/about">关于我们</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <script type="text/javascript">
+            showplot()
+            document.getElementById('btn').click()
+        </script> 
+
+    </body>
+</html>

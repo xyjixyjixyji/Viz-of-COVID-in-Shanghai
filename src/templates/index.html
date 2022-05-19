@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- import echarts  -->
+        <script src="../static/js/echarts.js"></script>
+        <script src="../static/js/datacharts.js"></script>
+        <link type="text/css" rel="stylesheet" href="../static/css/style.css" />
+    </head>
+
+    <body>
+        <!-- chart doms -->
+        <div id="indexchart1"></div>
+        <div id="indexchart2"></div>
+        <div id="indexchart3"></div>
+
+        <div class="top">
+            <!-- title -->
+            <div class="title">上海疫情信息可视化</div>
+
+            <!-- navigation bar -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/" class="active">全市信息概览</a>
+                    </li>
+
+                    <li>
+                        <a href="/sentiment">舆情分析</a>
+                    </li>
+
+                    <li>
+                        <a href="/district">全市分区统计数据</a>
+                    </li>
+
+                    <li style="float: right">
+                        <a class="active" href="/about">关于我们</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- map iframe, imported from backend -->
+        <iframe id="map", src="/map"></iframe>
+    </body>
+
+    <script>
+        draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
+        draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
+    </script>
+</html>

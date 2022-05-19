@@ -1,0 +1,391 @@
+/** ============================================= */
+#map {
+    position: absolute;
+    top: 10vh;
+    left: 0px;
+    height: 84vh;
+    width: 70vw;
+}
+
+/**
+ * Following are charts' dom in index.html, right hand side
+ */
+
+#indexchart1 {
+    position: absolute;
+    top: 10vh;
+    right: 0px;
+    height: 28vh;
+    width: 28vw;
+}
+
+#indexchart2 {
+    position: absolute;
+    top: 38vh;
+    right: 0px;
+    height: 28vh;
+    width: 28vw;
+}
+
+#indexchart3 {
+    position: absolute;
+    top: 66vh;
+    right: 0px;
+    height: 28vh;
+    width: 28vw;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.about {
+    text-align: center;
+    background-color: #222;
+    font-family: "微软雅黑", "黑体", "宋体";
+    font-size: 15px;
+}
+
+/** ============================================= */
+/** ============================================= */
+/** ============================================= */
+/** ============================================= */
+/** ============================================= */
+
+#content {
+    color: rgb(255, 255, 255);
+    font: 0.875em/1.5em "PTSans", "Arial", sans-serif;
+    font-size: 16px;
+}
+
+#content p {
+    padding: 5vh 10vw;
+    line-height: 2em;
+}
+
+/* ======================= */
+/* |                      |*/
+/* |      SENTIMENT       |*/
+/* |                      |*/
+/* ======================= */
+
+.overall {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50vh;
+    width: 100vw;
+    border-bottom: white solid;
+}
+
+.perday {
+    position: absolute;
+    top: 50vh;
+    left: 0px;
+    height: 40vh;
+    width: 100vw;
+}
+
+#word_cloud {
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    width: 30vw;
+    height: 40vh;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#emo_in_all {
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+    width: 60vw;
+    height: 25vh;
+    border-style: hidden;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+#box_line {
+    position: absolute;
+    top: 5vh;
+    left: 40vw;
+    width: 60vw;
+    height: 25vh;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: hidden;
+}
+
+#word_count {
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    border-width: 2px;
+    width: 50vw;
+    height: 30vh;
+    border-style: hidden;
+    box-sizing: border-box;
+}
+
+#emo_daily {
+    position: absolute;
+    top: 50%;
+    left: 50vw;
+    width: 50%;
+    height: 40%;
+    box-sizing: border-box;
+    border-style:hidden;
+    border-width: 2px;
+}
+
+#sent h1 {
+    color: #ffffff;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif, serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 48px;
+    text-decoration: underline;
+    margin: 0.5em;
+    background-color: #04aa6d;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+#sent h2 {
+    color: #7c795d;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+#sent .subheader {
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffcc66;
+    margin: 0 0 24px;
+}
+
+#sent p {
+    color: #4c4a37;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+#sent a {
+    color: #ff9900;
+    background: #fff4a3;
+    text-decoration: none;
+}
+
+#sent a:hover {
+    color: #ffcc66;
+}
+
+
+/* ======================= */
+/* |                      |*/
+/* |      BEAUTIFY        |*/
+/* |                      |*/
+/* ======================= */
+
+#content h1 {
+    background: #04aa6d;
+
+    border-radius: 6px 6px 6px 6px;
+
+    box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+
+    color: #ffffff;
+
+    font-family: "å¾®è½¯é›…é»‘", "å®‹ä½“", "é»‘ä½“", Arial;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    height: 35px;
+
+    line-height: 25px;
+
+    margin: 18px 0 !important;
+
+    padding: 8px 0 5px 5px;
+
+    text-shadow: 2px 2px 3px #222222;
+}
+
+#content h2 {
+    background: #0effe3;
+
+    border-radius: 6px 6px 6px 6px;
+
+    box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+
+    color: #ffffff;
+
+    font-family: "å¾®è½¯é›…é»‘", "å®‹ä½“", "é»‘ä½“", Arial;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    height: 30px;
+
+    line-height: 23px;
+
+    margin: 12px 0 !important;
+
+    padding: 5px 0 5px 10px;
+
+    text-shadow: 2px 2px 3px #222222;
+}
+
+#content h3 {
+    background: #01ffa6;
+
+    border-radius: 6px 6px 6px 6px;
+
+    box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+
+    color: #ffffff;
+
+    font-family: "å¾®è½¯é›…é»‘", "å®‹ä½“", "é»‘ä½“", Arial;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    height: 24px;
+
+    line-height: 20px;
+
+    margin: 12px 0 !important;
+
+    padding: 5px 0 5px 10px;
+
+    text-shadow: 2px 2px 3px #222222;
+}
+
+emph {
+    font-weight: bold;
+}
+
+red {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+path {
+    stroke: #fff;
+}
+path:hover {
+    opacity: 0.9;
+}
+rect:hover {
+    fill: blue;
+}
+.axis {
+    font: 10px sans-serif;
+}
+.legend tr {
+    border-bottom: 1px solid grey;
+}
+.legend tr:first-child {
+    border-top: 1px solid grey;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+.legend {
+    margin-bottom: 76px;
+    display: inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td {
+    padding: 4px 5px;
+    vertical-align: bottom;
+}
+.legendFreq,
+.legendPerc {
+    align: right;
+    width: 50px;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.title {
+    position: absolute;
+    left: 5vw;
+    top: 0px;
+    text-align: center;
+    padding: 2vw;
+    font-size: 18px;
+}
+
+.top ul {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    bottom: 0px;
+    width: 100vw;
+}
+
+.top li {
+    float: left;
+}
+
+.top li a {
+    display: block;
+    padding: 1em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.top li a.active {
+    background-color: #04aa6d;
+    color: white;
+}
+
+.top li a:hover:not(.active) {
+    background-color: #222;
+    color: white;
+}
+
+li {
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
