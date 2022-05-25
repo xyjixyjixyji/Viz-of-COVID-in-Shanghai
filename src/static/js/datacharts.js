@@ -181,7 +181,7 @@ function draw_line_chart(chartdom_name, region_name, data_dict, pred_dict, title
  * region_name: 'Shanghai', 'Changning' etc.
  * data_dict: passed by flask ({{qz|safe}})
  */
-function draw_line_chart_for_district(chartdom_name, region_name, data_dict, title) {
+function draw_line_chart_for_district(chartdom_name, region_name, data_dict, title, color) {
     var chartdom = document.getElementById(chartdom_name);
     var chart = echarts.init(chartdom);
     var datas = data_dict[region_name];
@@ -215,7 +215,20 @@ function draw_line_chart_for_district(chartdom_name, region_name, data_dict, tit
             {
                 data: datas,
                 type: "line",
-                areaStyle: {},
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      {
+                        offset: 0,
+                        color: 'rgb(0, 0, 0)'
+                      },
+                      {
+                        offset: 1,
+                        color: color,
+                      }
+                    ])
+                  },
+                showSymbol: false,
             },
         ],
     };

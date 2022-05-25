@@ -4,14 +4,19 @@
         <!-- import echarts  -->
         <script src="../static/js/echarts.js"></script>
         <script src="../static/js/datacharts.js"></script>
+        <script src="../static/js/utils.js"></script>
         <link type="text/css" rel="stylesheet" href="../static/css/style.css" />
     </head>
 
     <body>
         <!-- chart doms -->
+        <div id="qz_today" class="info"></div>
+        <div id="wzz_today" class="info"></div>
+        <div id="qz_cumu" class="info"></div>
+        <div id="wzz_cumu" class="info"></div>
+
         <div id="indexchart1"></div>
         <div id="indexchart2"></div>
-        <div id="indexchart3"></div>
 
 	<button id="charttoggle" onclick="toggle()">柱状图</button>
 
@@ -47,6 +52,12 @@
     </body>
 
     <script>
+        var qz_today = document.getElementById('qz_today')
+        var wzz_today = document.getElementById('wzz_today')
+        var qz_cumu = document.getElementById('qz_cumu')
+        var wzz_cumu = document.getElementById('wzz_cumu')
+
+
         draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
         draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
 

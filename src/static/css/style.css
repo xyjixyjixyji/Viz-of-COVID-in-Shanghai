@@ -3,7 +3,7 @@
     position: absolute;
     top: 10vh;
     left: 0px;
-    height: 84vh;
+    height: 80vh;
     width: 70vw;
 }
 
@@ -38,9 +38,60 @@
   transform: translateY(4px);
 }
 
-#indexchart1 {
+.info {
+    text-align: center;
+    background-color: #222;
+    font-family: "微软雅黑", "黑体", "宋体";
+    font-size: 15px;
+}
+
+#qz_today {
     position: absolute;
     top: 10vh;
+    left: 72vw;
+    width: 12vw;
+    height: 10vh;
+    border: white solid;
+    border-radius: 15px;
+    background-color: #ff1313;
+}
+
+#wzz_today {
+    position: absolute;
+    top: 10vh;
+    right: 3vw;
+    width: 12vw;
+    height: 10vh;
+    border: white solid;
+    border-radius: 15px;
+    background-color: #f87d09;
+}
+
+#qz_cumu {
+    position: absolute;
+    top: 22vh;
+    left: 72vw;
+    width: 12vw;
+    height: 10vh;
+    border: white solid;
+    border-radius: 15px;
+    background-color: #f84e4e;
+}
+
+#wzz_cumu {
+    position: absolute;
+    top: 22vh;
+    right: 3vw;
+    width: 12vw;
+    height: 10vh;
+    border: white solid;
+    border-radius: 15px;
+    background-color: #f58945;
+}
+
+#indexchart1 {
+    position: absolute;
+    top: 35vh;
     right: 0px;
     height: 28vh;
     width: 28vw;
@@ -48,20 +99,11 @@
 
 #indexchart2 {
     position: absolute;
-    top: 38vh;
+    top: 63vh;
     right: 0px;
     height: 28vh;
     width: 28vw;
 }
-
-#indexchart3 {
-    position: absolute;
-    top: 66vh;
-    right: 0px;
-    height: 28vh;
-    width: 28vw;
-}
-
 
 * {
     box-sizing: border-box;
@@ -226,7 +268,7 @@
 .charts * {
     float: left;
     height: 25vh;
-    width: 33vw; /* depends on how many charts per line*/
+    width: 40vw; /* depends on how many charts per line*/
 }
 
 /* ======================= */
