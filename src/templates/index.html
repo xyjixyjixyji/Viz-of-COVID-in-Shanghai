@@ -13,6 +13,8 @@
         <div id="indexchart2"></div>
         <div id="indexchart3"></div>
 
+	<button id="charttoggle" onclick="toggle()">柱状图</button>
+
         <div class="top">
             <!-- title -->
             <div class="title">上海疫情信息可视化</div>
@@ -47,5 +49,18 @@
     <script>
         draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
         draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
+
+        function toggle() {
+            var btn = document.getElementById('charttoggle')
+            if (btn.innerText == "折线图") {
+                btn.innerText = "柱状图";
+                draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
+                draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
+            } else {
+                btn.innerText = "折线图";
+                draw_bar_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
+                draw_bar_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
+            }
+        }
     </script>
 </html>

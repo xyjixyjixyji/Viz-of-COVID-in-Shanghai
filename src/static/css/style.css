@@ -11,6 +11,33 @@
  * Following are charts' dom in index.html, right hand side
  */
 
+#charttoggle {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+    
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #0faa6d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#charttoggle:hover {background-color: #04aa6d}
+
+#charttoggle:active {
+  background-color: #04aa6d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 #indexchart1 {
     position: absolute;
     top: 10vh;

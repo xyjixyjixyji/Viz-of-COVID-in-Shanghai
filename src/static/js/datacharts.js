@@ -44,6 +44,69 @@ function days_to_strings(_days) {
     return ret;
 }
 
+function draw_bar_chart(chartdom_name, region_name, data_dict, pred_dict, title) {
+    var chartdom = document.getElementById(chartdom_name);
+    var chart = echarts.init(chartdom);
+    var data = data_dict[region_name];
+    var pred = pred_dict[region_name];
+
+    var datas = data;
+    for (let i = 0; i < pred.length; i++) {
+        val = pred[i];
+        datas.push({
+            value: val,
+            itemStyle: {
+                color: "#a90000",
+            }
+        })
+    }
+
+    option = {
+        title: {
+            text: title,
+            left: 'center',
+            textStyle:{
+                //⽂字颜⾊
+                color: '#ffffff',
+                //字体风格,'normal','italic','oblique'
+                fontStyle: 'normal',
+                //字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+                fontWeight: 'bold',
+                //字体系列
+                fontFamily: 'sans-serif',
+                //字体⼤⼩
+                fontSize: 18
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+              type: 'cross',
+              label: {
+                backgroundColor: '#6a7985'
+              }
+            }
+        },
+        xAxis: {
+            type: "category",
+            boundaryGap: false,
+            data: days_to_strings(data.length+pred.length),
+        },
+        yAxis: {
+            type: "value",
+        },
+        series: [
+            {
+                data: datas,
+                type: "bar",
+                areaStyle: {},
+            },
+        ],
+    };
+
+    chart.setOption(option);
+}
+
 /*
  * chartdom: document.getelementbyid(id)
  * region_name: 'Shanghai', 'Changning' etc.
@@ -69,8 +132,20 @@ function draw_line_chart(chartdom_name, region_name, data_dict, pred_dict, title
 
     option = {
         title: {
-            text: title + " " + region_name + " ()",
+            text: title,
             left: 'center',
+            textStyle:{
+                //⽂字颜⾊
+                color: '#ffffff',
+                //字体风格,'normal','italic','oblique'
+                fontStyle: 'normal',
+                //字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+                fontWeight: 'bold',
+                //字体系列
+                fontFamily: 'sans-serif',
+                //字体⼤⼩
+                fontSize: 18
+            }
         },
         tooltip: {
             trigger: 'axis',
@@ -113,16 +188,19 @@ function draw_line_chart_for_district(chartdom_name, region_name, data_dict, tit
 
     option = {
         title: {
-            text: title + " " + region_name + " ()",
+            text: title,
             left: 'center',
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-              type: 'cross',
-              label: {
-                backgroundColor: '#6a7985'
-              }
+            textStyle:{
+                //⽂字颜⾊
+                color: '#ffffff',
+                //字体风格,'normal','italic','oblique'
+                fontStyle: 'normal',
+                //字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+                fontWeight: 'bold',
+                //字体系列
+                fontFamily: 'sans-serif',
+                //字体⼤⼩
+                fontSize: 18
             }
         },
         xAxis: {
