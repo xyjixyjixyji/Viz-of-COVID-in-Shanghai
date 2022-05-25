@@ -38,11 +38,22 @@
   transform: translateY(4px);
 }
 
+#from {
+    position: absolute;
+    right: 3vw;
+    top: 33vh;
+    font-size: 8px;
+    font-weight: bold;
+}
+
 .info {
-    text-align: center;
     background-color: #222;
     font-family: "微软雅黑", "黑体", "宋体";
-    font-size: 15px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 0;
 }
 
 #qz_today {
@@ -54,6 +65,7 @@
     border: white solid;
     border-radius: 15px;
     background-color: #ff1313;
+    color: white;
 }
 
 #wzz_today {
@@ -65,6 +77,7 @@
     border: white solid;
     border-radius: 15px;
     background-color: #f87d09;
+    color: white;
 }
 
 #qz_cumu {
@@ -76,6 +89,12 @@
     border: white solid;
     border-radius: 15px;
     background-color: #f84e4e;
+
+
+}
+
+smaller {
+    font-size: 10px;
 }
 
 #wzz_cumu {
@@ -87,6 +106,9 @@
     border: white solid;
     border-radius: 15px;
     background-color: #f58945;
+
+    color: white;
+    text-align: center;
 }
 
 #indexchart1 {

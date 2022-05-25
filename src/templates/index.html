@@ -14,6 +14,7 @@
         <div id="wzz_today" class="info"></div>
         <div id="qz_cumu" class="info"></div>
         <div id="wzz_cumu" class="info"></div>
+        <div id="from">统计自2022年4月1日</div>
 
         <div id="indexchart1"></div>
         <div id="indexchart2"></div>
@@ -57,6 +58,16 @@
         var qz_cumu = document.getElementById('qz_cumu')
         var wzz_cumu = document.getElementById('wzz_cumu')
 
+        var date = get_latest_date({{qz|safe}}, 'Shanghai');
+        var val_qz_today = get_latest_data({{qz|safe}}, 'Shanghai');
+        var val_wzz_today = get_latest_data({{wzz|safe}}, 'Shanghai');
+        qz_today.innerHTML = "<smaller>上海市" + date + "新增确诊病例</smaller><br/>共 " + val_qz_today + " 例";
+        wzz_today.innerHTML = "<smaller>上海市" + date + "新增无症状病例</smaller><br/>共 " + val_wzz_today + " 例";
+
+        var val_qz_cumu = get_cumulative({{qz|safe}}, 'Shanghai');
+        var val_wzz_cumu = get_cumulative({{wzz|safe}}, 'Shanghai');
+        qz_cumu.innerHTML = "<smaller>上海市累计确诊病例</smaller><br/>共 " + val_qz_cumu + " 例";
+        wzz_cumu.innerHTML = "<smaller>上海市累计无症状病例</smaller><br/>共 " + val_wzz_cumu + " 例";
 
         draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
         draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
