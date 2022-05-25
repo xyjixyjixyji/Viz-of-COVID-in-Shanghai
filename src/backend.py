@@ -1,6 +1,7 @@
 from flask import *
 from datetime import timedelta
 from timeseries import return_dictionaries
+from districts import return_stats_dict
 
 app = Flask(__name__)
 
@@ -22,7 +23,10 @@ def map():
 
 @app.route("/district")
 def district():
-    return render_template('district.html')
+    region_qz, region_wzz = return_stats_dict()
+    return render_template('district.html',
+                            qz=region_qz,
+                            wzz=region_wzz)
 
 @app.route("/sentiment")
 def sentiment():
