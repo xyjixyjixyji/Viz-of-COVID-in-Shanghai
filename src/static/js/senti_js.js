@@ -204,11 +204,11 @@ var senti_per = [[],[],[],[],[]];
                     break;
                 }
             }
-            count[type] += 70 / si;
+            count[type] += 100 / si;
         }
         for (let j = 0; j < 5; j++) {
             senti_data[i].push([0, j, count[j]]);
-            senti_per[j].push(count[j]*10/7)
+            senti_per[j].push(count[j])
         }
     }
 
@@ -253,7 +253,7 @@ function showplot() {
                 "color": "#ffffff",
             },
             },
-     
+            tooltip: {},
             //  图表距边框的距离,可选值：'百分比'¦ {number}（单位px）
             grid: {
                 top: '16%',   // 等价于 y: '16%'
@@ -364,8 +364,6 @@ function showplot() {
                     }
                 },
                 {
-                    borderColor: "#ffffff",
-                    borderWidth: 1,
                     textStyle: {
                         fontWeight: "normal",
                         fontSize: 14,
@@ -391,12 +389,7 @@ function showplot() {
                     fromTransformResult: 1,
                 },
             ],
-            tooltip: {
-                trigger: "item",
-                axisPointer: {
-                    type: "shadow",
-                },
-            },
+            
             grid: {
                 left: "10%",
                 right: "10%",
@@ -505,15 +498,9 @@ function setsubmit(idexfordate) {
     var Emo_month = echarts.init(chartDom);
     var emo_month_option;
 
-    const title = [];
     const singleAxis = [];
     const series = [];
     days.forEach(function (day, idx) {
-        title.push({
-            textBaseline: "middle",
-            top: ((idx + 0.5) * 100) / 7 + "%",
-            text: day,
-        });
         singleAxis.push({
             left: 10,
             type: "category",
@@ -534,7 +521,7 @@ function setsubmit(idexfordate) {
             data: [],
             color: "#04aa6d",
             symbolSize: function (dataItem) {
-                return dataItem[1] * 3;
+                return dataItem[1] * 2.5;
             },
         });
     });
@@ -546,6 +533,16 @@ function setsubmit(idexfordate) {
     emo_month_option = {
         tooltip: {
             position: "top",
+            trigger: 'item', //item数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。
+            axisPointer: {
+                // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            },
+            formatter: function (params) {
+                //console.log(params)
+                return params.name+'<br/>百分比 : '+params.data[1]+'%'
+            }
+            // formatter: '{b} <br/>百分比 : {c1}%' //{a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）
         },
         title: {
             text: '舆论情绪占比对比图',

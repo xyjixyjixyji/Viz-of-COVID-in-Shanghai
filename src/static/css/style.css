@@ -192,8 +192,8 @@ smaller {
 #emo_in_all {
     position: absolute;
     top: 27vh;
-    left: 40vw;
-    width: 60vw;
+    left: 37vw;
+    width: 62vw;
     height: 25vh;
     border-style: hidden;
     border-width: 2px;
@@ -203,8 +203,8 @@ smaller {
 #box_line {
     position: absolute;
     top: 5vh;
-    left: 35vw;
-    width: 70vw;
+    left: 33vw;
+    width: 68vw;
     height: 22vh;
     box-sizing: border-box;
     border-width: 2px;
