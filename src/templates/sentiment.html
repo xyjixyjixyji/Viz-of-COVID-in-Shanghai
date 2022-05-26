@@ -4,7 +4,7 @@
         <!-- import echarts  -->
         <script src="../static/js/echarts.js"></script>
         <!-- import sentiment analysis js -->
-        <script src="../static/js/senti_js.js"></script>
+        
         <link type="text/css" rel="stylesheet" href="../static/css/style.css" />
     </head>
 
@@ -22,10 +22,18 @@
 
             <div class="perday">
                 <h1>每日舆情分析</h1>
+                <div class="slider">
+                    <!-- 显示选择的数值容器 -->
+                    <span id="selected">
+                      4月2日
+                    </span>
+                    <!-- 滑动选择器 -->
+                    <input type="range" id="slider-input" min="0" max="50" value="0" />
+                </div>
 
-                <select id="mylink"></select>
+                <!-- <select id="mylink"></select> -->
 
-                <input type="button" id="btn" value="显示" onclick="setsubmit(this)" /> 
+                <!-- <input type="button" id="btn" value="显示" onclick="setsubmit(this)" />  -->
 
                 <div id="word_count" ></div>
 
@@ -55,10 +63,10 @@
                 </ul>
             </nav>
         </div>
-
+        <script src="../static/js/senti_js.js"></script>
         <script type="text/javascript">
             showplot()
-            document.getElementById('btn').click()
+            setsubmit(0)
         </script> 
 
     </body>

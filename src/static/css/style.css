@@ -165,14 +165,14 @@ smaller {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 50vh;
+    height: 55vh;
     width: 100vw;
     border-bottom: white solid;
 }
 
 .perday {
     position: absolute;
-    top: 50vh;
+    top: 55vh;
     left: 0px;
     height: 40vh;
     width: 100vw;
@@ -191,7 +191,7 @@ smaller {
 
 #emo_in_all {
     position: absolute;
-    top: 30vh;
+    top: 27vh;
     left: 40vw;
     width: 60vw;
     height: 25vh;
@@ -203,9 +203,9 @@ smaller {
 #box_line {
     position: absolute;
     top: 5vh;
-    left: 40vw;
-    width: 60vw;
-    height: 25vh;
+    left: 35vw;
+    width: 70vw;
+    height: 22vh;
     box-sizing: border-box;
     border-width: 2px;
     border-style: hidden;
@@ -222,12 +222,67 @@ smaller {
     box-sizing: border-box;
 }
 
+#slider {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 5%;
+    box-sizing: border-box;
+}
+#selected {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 5%;
+    height: 7%;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: #04aa6d;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
+}
+#slider-input {
+    position: absolute;
+    top: 5.5%;
+    left: 21%;
+    width: 60%;
+    height: 5%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgb(71, 197, 115);
+    background: linear-gradient(75deg, #6da83a 0%, #7a7b56 100%);
+}
+input[type="range"]:active::-webkit-slider-thumb {
+    background-color: #2a6a4d;
+    box-shadow: 0 0 0 6px rgba(54, 181, 54, 0.4);
+  }
+input[type="range"] {
+    /* 禁用浏览器默认外观 */
+    -webkit-appearance: none;
+    background: linear-gradient(75deg, #72738f 0%, #575fcf 100%);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 6px rgb(28, 32, 148);
+  }
+  
+  /* 滑动选择器上的滑动按钮 */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #b9dfcf;
+    transition: 0.3s;
+  }
+
 #emo_daily {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50vw;
     width: 50%;
-    height: 40%;
+    height: 70%;
     box-sizing: border-box;
     border-style:hidden;
     border-width: 2px;
@@ -492,3 +547,5 @@ li {
 li:last-child {
     border-right: none;
 }
+
+
