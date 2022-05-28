@@ -129,7 +129,6 @@ function draw_line_chart(chartdom_name, region_name, data_dict, pred_dict, title
         })
     }
 
-
     option = {
         title: {
             text: title,

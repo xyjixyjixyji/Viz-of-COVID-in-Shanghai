@@ -7,9 +7,6 @@
     width: 70vw;
 }
 
-
-
-
 /**
  * Following are charts' dom in index.html, right hand side
  */
@@ -118,15 +115,15 @@ smaller {
     position: absolute;
     top: 35vh;
     right: 0px;
-    height: 28vh;
+    height: 30vh;
     width: 28vw;
 }
 
 #indexchart2 {
     position: absolute;
-    top: 63vh;
+    top: 65vh;
     right: 0px;
-    height: 28vh;
+    height: 30vh;
     width: 28vw;
 }
 
