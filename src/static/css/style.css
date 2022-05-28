@@ -362,7 +362,27 @@ input[type="range"]::-webkit-slider-thumb {
 .charts * {
     float: left;
     height: 25vh;
-    width: 45vw; /* depends on how many charts per line*/
+    width: 50vw; /* depends on how many charts per line*/
+}
+
+#district-title {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    font-weight: bold;
+    font-size: xx-large;
+    color: #00aa6d;
+    font-family: "微软雅黑", "黑体", "宋体", sans-serif, serif;
+}
+
+#district-hint {
+    position: absolute;
+    top: 4.5em;
+    left: 22em;
+    text-shadow: white;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif, serif;
 }
 
 /* ======================= */
