@@ -7,6 +7,9 @@
     width: 70vw;
 }
 
+
+
+
 /**
  * Following are charts' dom in index.html, right hand side
  */
@@ -340,12 +343,26 @@ input[type="range"]::-webkit-slider-thumb {
 /* |      DISTRICTS       |*/
 /* |                      |*/
 /* ======================= */
-.charts {}
+.map_dist{
+    position: absolute;
+    top: 0vh;
+    left: 0px;
+    height: 70vh;
+    width: 100vw;
+}
+
+.charts {
+    width: 100vw;
+    height: 30vh;
+    left: 0px;
+    top: 70vh;
+    position: absolute;
+}
 
 .charts * {
     float: left;
     height: 25vh;
-    width: 40vw; /* depends on how many charts per line*/
+    width: 45vw; /* depends on how many charts per line*/
 }
 
 /* ======================= */

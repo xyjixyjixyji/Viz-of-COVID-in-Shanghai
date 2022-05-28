@@ -184,6 +184,7 @@ function draw_line_chart(chartdom_name, region_name, data_dict, pred_dict, title
 function draw_line_chart_for_district(chartdom_name, region_name, data_dict, title, color) {
     var chartdom = document.getElementById(chartdom_name);
     var chart = echarts.init(chartdom);
+    chart.clear();
     var datas = data_dict[region_name];
 
     option = {
