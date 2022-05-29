@@ -251,7 +251,8 @@ function showplot() {
               data: ['非常消极','消极','中立','积极','非常积极'],
               textStyle: {
                 "color": "#ffffff",
-            },
+                fontSize: 10,
+              },
             },
             tooltip: {},
             //  图表距边框的距离,可选值：'百分比'¦ {number}（单位px）

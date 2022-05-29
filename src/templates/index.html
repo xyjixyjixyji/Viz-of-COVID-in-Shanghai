@@ -23,7 +23,7 @@
 
         <div class="top">
             <!-- title -->
-            <div class="title">上海疫情信息可视化</div>
+            <div class="title">上海疫情信息可视化 - Visualization of Omicron Pandemic in Shanghai</div>
 
             <!-- navigation bar -->
             <nav>
@@ -69,19 +69,19 @@
         qz_cumu.innerHTML = "<smaller>上海市累计确诊病例</smaller><br/>共 " + val_qz_cumu + " 例";
         wzz_cumu.innerHTML = "<smaller>上海市累计无症状病例</smaller><br/>共 " + val_wzz_cumu + " 例";
 
-        draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
-        draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
+        draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数(红色为预测值)");
+        draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数(红色为预测值)");
 
         function toggle() {
             var btn = document.getElementById('charttoggle')
             if (btn.innerText == "折线图") {
                 btn.innerText = "柱状图";
-                draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
-                draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
+                draw_line_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数(红色为预测值)");
+                draw_line_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数(红色为预测值)");
             } else {
                 btn.innerText = "折线图";
-                draw_bar_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数");
-                draw_bar_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数");
+                draw_bar_chart("indexchart1", "Shanghai", {{qz|safe}}, {{p_qz|safe}}, "上海确诊病例人数(红色为预测值)");
+                draw_bar_chart("indexchart2", "Shanghai", {{wzz|safe}}, {{p_wzz|safe}}, "上海无症状病例人数(红色为预测值)");
             }
         }
     </script>

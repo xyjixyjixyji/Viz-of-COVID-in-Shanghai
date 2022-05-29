@@ -7,9 +7,6 @@
     width: 70vw;
 }
 
-
-
-
 /**
  * Following are charts' dom in index.html, right hand side
  */
@@ -118,15 +115,15 @@ smaller {
     position: absolute;
     top: 35vh;
     right: 0px;
-    height: 28vh;
+    height: 30vh;
     width: 28vw;
 }
 
 #indexchart2 {
     position: absolute;
-    top: 63vh;
+    top: 65vh;
     right: 0px;
-    height: 28vh;
+    height: 30vh;
     width: 28vw;
 }
 
@@ -345,25 +342,38 @@ input[type="range"]::-webkit-slider-thumb {
 /* ======================= */
 .map_dist{
     position: absolute;
-    top: 0vh;
-    left: 0px;
-    height: 70vh;
+    top: 17vh;
+    left: -30vw;
+    height: 90vh;
     width: 100vw;
 }
 
 .charts {
     width: 100vw;
     height: 30vh;
-    left: 0px;
-    top: 70vh;
+    right: 0px;
+    top: 0vh;
     position: absolute;
 }
 
-.charts * {
-    float: left;
-    height: 25vh;
-    width: 50vw; /* depends on how many charts per line*/
+.charts * {}
+
+#char1 {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    width: 50vw;
+    height: 30vh;
 }
+
+#char2 {
+    position: absolute;
+    top: 50vh;
+    right: 5vw;
+    width: 50vw;
+    height: 30vh;
+}
+
 
 #district-title {
     position: absolute;
@@ -538,11 +548,14 @@ body {
 
 .title {
     position: absolute;
-    left: 5vw;
+    left: 3vw;
     top: 0px;
     text-align: center;
+    font-weight: bold;
     padding: 2vw;
     font-size: 18px;
+    background-color: rgb(43, 42, 42);
+    border-radius: 20px;
 }
 
 .top ul {
