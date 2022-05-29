@@ -5,77 +5,161 @@
         <script src="../static/js/echarts.js"></script>
         <script src="../static/js/datacharts.js"></script>
         <link type="text/css" rel="stylesheet" href="../static/css/style.css" />
+		<script src="../static/js/shanghai.js"></script>
+		
     </head>
 
     <body>
+	<div id="district-title">分区信息汇总</div>
+	<div id="district-hint">点击地图显示分区信息</div>
+	<div class="map_dist" id="main" style="60%; height: 60%;"></div>
 	<div class="charts">
-	    <div id="PudongNew1"></div>
-	    <div id="PudongNew2"></div>
-	    <div id="Huangpu1"></div>
-	    <div id="Huangpu2"></div>
-	    <div id="Jingan1"></div>
-	    <div id="Jingan2"></div>
-	    <div id="Xuhui1"></div>
-	    <div id="Xuhui2"></div>
-	    <div id="Changning1"></div>
-	    <div id="Changning2"></div>
-	    <div id="Putuo1"></div>
-	    <div id="Putuo2"></div>
-	    <div id="Hongkou1"></div>
-	    <div id="Hongkou2"></div>
-	    <div id="Yangpu1"></div>
-	    <div id="Yangpu2"></div>
-	    <div id="Baoshan1"></div>
-	    <div id="Baoshan2"></div>
-	    <div id="Minhang1"></div>
-	    <div id="Minhang2"></div>
-	    <div id="Jiading1"></div>
-	    <div id="Jiading2"></div>
-	    <div id="Jinshan1"></div>
-	    <div id="Jinshan2"></div>
-	    <div id="Songjiang1"></div>
-	    <div id="Songjiang2"></div>
-	    <div id="Qingpu1"></div>
-	    <div id="Qingpu2"></div>
-	    <div id="Fengxian1"></div>
-	    <div id="Fengxian2"></div>
-	    <div id="Chongming1"></div>
-	    <div id="Chongming2"></div>
+	    <div id="char1"></div>
+	    <div id="char2"></div>
 	</div>
 
 	<script>
-	    draw_line_chart_for_district("PudongNew1", "PudongNew", {{qz|safe}}, "浦东新区确诊病例", "#ff0000");
-	    draw_line_chart_for_district("PudongNew2", "PudongNew", {{wzz|safe}}, "浦东新区无症状病例", "#ff0000");
-	    draw_line_chart_for_district("Huangpu1", "Huangpu", {{qz|safe}}, "黄浦区确诊病例", "#ff0066");
-	    draw_line_chart_for_district("Huangpu2", "Huangpu", {{wzz|safe}}, "黄浦区无症状病例", "#ff0066");
-	    draw_line_chart_for_district("Jingan1", "Jingan", {{qz|safe}}, "静安区确诊病例", "#6600ff");
-	    draw_line_chart_for_district("Jingan2", "Jingan", {{wzz|safe}}, "静安区无症状病例", "#6600ff");
-	    draw_line_chart_for_district("Xuhui1", "Xuhui", {{qz|safe}}, "徐汇区确诊病例", "#00ff00");
-	    draw_line_chart_for_district("Xuhui2", "Xuhui", {{wzz|safe}}, "徐汇区无症状病例", "#00ff00");
-	    draw_line_chart_for_district("Changning1", "Changning", {{qz|safe}}, "长宁区确诊病例", "#0000ff");
-	    draw_line_chart_for_district("Changning2", "Changning", {{wzz|safe}}, "长宁区无症状病例", "#0000ff");
-	    draw_line_chart_for_district("Putuo1", "Putuo", {{qz|safe}}, "普陀区确诊病例", "#ff6600");
-	    draw_line_chart_for_district("Putuo2", "Putuo", {{wzz|safe}}, "普陀区无症状病例", "#ff6600");
-	    draw_line_chart_for_district("Hongkou1", "Hongkou", {{qz|safe}}, "虹口区确诊病例", "#66ff00");
-	    draw_line_chart_for_district("Hongkou2", "Hongkou", {{wzz|safe}}, "虹口区无症状病例", "#66ff00");
-	    draw_line_chart_for_district("Yangpu1", "Yangpu", {{qz|safe}}, "杨浦区确诊病例", "#00ff66");
-	    draw_line_chart_for_district("Yangpu2", "Yangpu", {{wzz|safe}}, "杨浦区无症状病例", "#00ff66");
-	    draw_line_chart_for_district("Baoshan1", "Baoshan", {{qz|safe}}, "宝山区确诊病例", "#0066ff");
-	    draw_line_chart_for_district("Baoshan2", "Baoshan", {{wzz|safe}}, "宝山区无症状病例", "#0066ff");
-	    draw_line_chart_for_district("Minhang1", "Minhang", {{qz|safe}}, "闵行区确诊病例", "#ff2266");
-	    draw_line_chart_for_district("Minhang2", "Minhang", {{wzz|safe}}, "闵行区无症状病例", "#ff2266");
-	    draw_line_chart_for_district("Jiading1", "Jiading", {{qz|safe}}, "嘉定区确诊病例", "#ff6622");
-	    draw_line_chart_for_district("Jiading2", "Jiading", {{wzz|safe}}, "嘉定区无症状病例", "#ff6622");
-	    draw_line_chart_for_district("Jinshan1", "Jinshan", {{qz|safe}}, "金山区确诊病例", "#66ff22");
-	    draw_line_chart_for_district("Jinshan2", "Jinshan", {{wzz|safe}}, "金山区无症状病例", "#66ff22");
-	    draw_line_chart_for_district("Songjiang1", "Songjiang", {{qz|safe}}, "松江区确诊病例", "#6622ff");
-	    draw_line_chart_for_district("Songjiang2", "Songjiang", {{wzz|safe}}, "松江区无症状病例", "#6622ff");
-	    draw_line_chart_for_district("Qingpu1", "Qingpu", {{qz|safe}}, "青浦区确诊病例", "#2266ff");
-	    draw_line_chart_for_district("Qingpu2", "Qingpu", {{wzz|safe}}, "青浦区无症状病例", "#2266ff");
-	    draw_line_chart_for_district("Fengxian1", "Fengxian", {{qz|safe}}, "奉贤区确诊病例", "#22ff66");
-	    draw_line_chart_for_district("Fengxian2", "Fengxian", {{wzz|safe}}, "奉贤区无症状病例", "#22ff66");
-	    draw_line_chart_for_district("Chongming1", "Chongming", {{qz|safe}}, "崇明区确诊病例", "#224466");
-	    draw_line_chart_for_district("Chongming2", "Chongming", {{wzz|safe}}, "崇明区无症状病例", "#224466");
+		var myChart = echarts.init(document.getElementById('main'));
+		var option = {
+		title: {
+		},
+		tooltip : {
+			trigger: 'item',
+			formatter: function(a){
+				return a[2];
+			}
+		},
+
+		dataColor : {
+			x: '-1000 px', //图例横轴位置
+			y: '-1000 px', //图例纵轴位置
+			splitList: [
+				{ start: 1, end: 1, label: '崇明县', color: '#D8BFD8' },
+				{ start: 2, end: 2, label: '宝山区', color: '#0066ff' },
+				{ start: 3, end: 3, label: '嘉定区', color: '#ff6622' },
+				{ start: 4, end: 4, label: '青浦区', color: '#2266ff' },
+				{ start: 5, end: 5, label: '杨浦区', color: '#00ff66' },
+				{ start: 6, end: 6, label: '虹口区', color: '#66ff00' },
+				{ start: 7, end: 7, label: '闸北区', color: '#e2d7d7' },
+				{ start: 8, end: 8, label: '普陀区', color: '#ff6600' },
+				{ start: 9, end: 9, label: '静安区', color: '#6600ff' },
+				{ start: 10, end: 10, label: '黄浦区', color: '#ff0066' },
+				{ start: 11, end: 11, label: '卢湾区', color: '#e2d7d7' },
+				{ start: 12, end: 12, label: '长宁区', color: '#0000ff' },
+				{ start: 13, end: 13, label: '徐汇区', color: '#00ff00' },
+				{ start: 14, end: 14, label: '浦东新区', color: '#ff0000' },
+				{ start: 15, end: 15, label: '松江区', color: '#6622ff' },
+				{ start: 16, end: 16, label: '闵行区', color: "#ff2266" },
+				{ start: 17, end: 17, label: '金山区', color: '#66ff22' },
+				{ start: 18, end: 18, label: '奉贤区', color: '#22ff66' },
+				{ start: 19, end: 19, label: '南汇区', color: '#e2d7d7' },
+			]
+		},
+		series : [
+			{
+				name: '数据名称',
+				type: 'map',
+				mapType: '上海',
+				selectedMode : 'single',
+				itemStyle:{
+					normal:{label:{show:false}},
+					emphasis:{label:{show:true}}
+				},
+				data:[
+					{name: '崇明县',value: 1},
+					{name: '宝山区',value: 2},
+					{name: '嘉定区',value: 3},
+					{name: '青浦区',value: 4},
+					{name: '杨浦区',value: 5},
+					{name: '虹口区',value: 6},
+					{name: '闸北区',value: 7},
+					{name: '普陀区',value: 8},
+					{name: '静安区',value: 9},
+					{name: '黄浦区',value: 10},
+					{name: '卢湾区',value: 11},
+					{name: '长宁区',value:12},
+					{name: '徐汇区',value: 13},
+					{name: '浦东新区',value: 14},
+					{name: '松江区',value: 15},
+					{name: '闵行区',value: 16},
+					{name: '金山区',value: 17},
+					{name: '奉贤区',value: 18},
+					{name: '南汇区',value: 19}
+				]
+			}
+		]
+	};
+	myChart.setOption(option);
+	myChart.on('click', function (params) {//点击事件
+        if (params.componentType === 'series') {
+            var provinceName =params.name;
+            if(provinceName=='崇明县'){
+			draw_line_chart_for_district("char1", "Chongming", {{qz|safe}}, "崇明区确诊病例", "#224466");
+			draw_line_chart_for_district("char2", "Chongming", {{wzz|safe}}, "崇明区无症状病例", "#224466");
+            }
+			else if(provinceName=='宝山区'){
+			draw_line_chart_for_district("char1", "Baoshan", {{qz|safe}}, "宝山区确诊病例", "#0066ff");
+			draw_line_chart_for_district("char2", "Baoshan", {{wzz|safe}}, "宝山区无症状病例", "#0066ff");
+			}
+			else if(provinceName=='嘉定区'){
+				draw_line_chart_for_district("char1", "Jiading", {{qz|safe}}, "嘉定区确诊病例", "#ff6622");
+				draw_line_chart_for_district("char2", "Jiading", {{wzz|safe}}, "嘉定区无症状病例", "#ff6622");				
+			}
+			else if(provinceName=='青浦区'){
+				draw_line_chart_for_district("char1", "Qingpu", {{qz|safe}}, "青浦区确诊病例", "#2266ff");
+				draw_line_chart_for_district("char2", "Qingpu", {{wzz|safe}}, "青浦区无症状病例", "#2266ff");				
+			}
+			else if(provinceName=='杨浦区'){
+				draw_line_chart_for_district("char1", "Yangpu", {{qz|safe}}, "杨浦区确诊病例", "#00ff66");
+				draw_line_chart_for_district("char2", "Yangpu", {{wzz|safe}}, "杨浦区无症状病例", "#00ff66");
+			}
+			else if(provinceName=='虹口区'){
+				draw_line_chart_for_district("char1", "Hongkou", {{qz|safe}}, "虹口区确诊病例", "#66ff00");
+				draw_line_chart_for_district("char2", "Hongkou", {{wzz|safe}}, "虹口区无症状病例", "#66ff00");
+			}
+			else if(provinceName=='普陀区'){
+				draw_line_chart_for_district("char1", "Putuo", {{qz|safe}}, "普陀区确诊病例", "#ff6600");
+				draw_line_chart_for_district("char2", "Putuo", {{wzz|safe}}, "普陀区无症状病例", "#ff6600");
+			}
+			else if(provinceName=='静安区'){
+				draw_line_chart_for_district("char1", "Jingan", {{qz|safe}}, "静安区确诊病例", "#6600ff");
+				draw_line_chart_for_district("char2", "Jingan", {{wzz|safe}}, "静安区无症状病例", "#6600ff");
+			}
+			else if(provinceName=='黄浦区'){
+				draw_line_chart_for_district("char1", "Huangpu", {{qz|safe}}, "黄浦区确诊病例", "#ff0066");
+	    		draw_line_chart_for_district("char2", "Huangpu", {{wzz|safe}}, "黄浦区无症状病例", "#ff0066");
+			}
+			else if(provinceName=='长宁区'){
+				draw_line_chart_for_district("Changning1", "Changning", {{qz|safe}}, "长宁区确诊病例", "#0000ff");
+				draw_line_chart_for_district("Changning2", "Changning", {{wzz|safe}}, "长宁区无症状病例", "#0000ff");
+			}
+			else if(provinceName=='徐汇区'){
+				draw_line_chart_for_district("char1", "Xuhui", {{qz|safe}}, "徐汇区确诊病例", "#00ff00");
+				draw_line_chart_for_district("char2", "Xuhui", {{wzz|safe}}, "徐汇区无症状病例", "#00ff00");
+			}
+			else if(provinceName=='浦东新区'){
+				draw_line_chart_for_district("char1", "PudongNew", {{qz|safe}}, "浦东新区确诊病例", "#ff0000");
+	    		draw_line_chart_for_district("char2", "PudongNew", {{wzz|safe}}, "浦东新区无症状病例", "#ff0000");
+			}
+			else if(provinceName=='松江区'){
+				draw_line_chart_for_district("char1", "Songjiang", {{qz|safe}}, "松江区确诊病例", "#6622ff");
+				draw_line_chart_for_district("char2", "Songjiang", {{wzz|safe}}, "松江区无症状病例", "#6622ff");
+			}
+			else if(provinceName=='闵行区'){
+				draw_line_chart_for_district("char1", "Minhang", {{qz|safe}}, "闵行区确诊病例", "#ff2266");
+				draw_line_chart_for_district("char2", "Minhang", {{wzz|safe}}, "闵行区无症状病例", "#ff2266");
+			}
+			else if(provinceName=='金山区'){
+				draw_line_chart_for_district("char1", "Jinshan", {{qz|safe}}, "金山区确诊病例", "#66ff22");
+				draw_line_chart_for_district("char2", "Jinshan", {{wzz|safe}}, "金山区无症状病例", "#66ff22");
+			}
+			else if(provinceName=='奉贤区'){
+				draw_line_chart_for_district("char1", "Fengxian", {{qz|safe}}, "奉贤区确诊病例", "#22ff66");
+				draw_line_chart_for_district("char2", "Fengxian", {{wzz|safe}}, "奉贤区无症状病例", "#22ff66");
+			}
+		}
+
+});
 	</script>
 
         <div class="top">
