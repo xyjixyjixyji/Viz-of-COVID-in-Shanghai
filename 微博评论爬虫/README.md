@@ -1,10 +1,10 @@
-# Weibo Comment Crawler
+# 微博评论爬虫
 
 ## 功能：
 - 爬取单条微博的评论内容
 - 把爬取的内容保存到csv或mysql中
 - 对评论内容进行词频分析并画出词云图
-- 分析评论的文本情感，统计积极评论与消极评论的数量
+- 
 
 ## 运行环境
 - Python3
@@ -35,9 +35,9 @@ python weibo_comment_crawler.py -n [评论数量] -id [微博id]
 
 ### 运行结果
 1. 程序运行过程中会逐条显示爬取的内容；
-![](https://github.com/lu-zc/weibo-comment-crawler/blob/master/doc/readme_image/comments.png)
-2. 爬取结束以后会显示词云，并把评论内容存入目录weibo-comments下的csv文件中；
-![](https://github.com/lu-zc/weibo-comment-crawler/blob/master/doc/readme_image/word_cloud.png)
-3. 显示积极评论与消极评论的数量。
+  ![](https://github.com/lu-zc/weibo-comment-crawler/blob/master/doc/readme_image/comments.png)
 
-![](https://github.com/lu-zc/weibo-comment-crawler/blob/master/doc/readme_image/num_comments.png)
+2. 爬取结束以后会显示词云，并把评论内容存入目录weibo-comments下的csv文件中；
+  ![](https://github.com/lu-zc/weibo-comment-crawler/blob/master/doc/readme_image/word_cloud.png)
+
+  
