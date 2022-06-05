@@ -6,10 +6,10 @@
 
 ## 获取白玉兰项目数据：
 
-```bash
-bash fetch.sh
+```shell
+sh fetch.sh
 ```
-
+项目代码会自动解析csv文件
 
 
 ## 微博评论爬取
