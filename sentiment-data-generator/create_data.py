@@ -12,7 +12,7 @@ for da in range(2,31):
     i = "4_"+str(da)
     if(date.count(i)>0):
         vlist = []
-        f = pd.read_csv('new'+i+'.csv',engine='python')
+        f = pd.read_csv('purified_data//'+i+'.csv',engine='python')
         for sent in range(len(f['text'])):
             vlist += SnowNLP(f['text'][sent]).words
         

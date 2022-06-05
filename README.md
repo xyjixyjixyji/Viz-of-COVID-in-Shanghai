@@ -20,9 +20,8 @@ bash fetch.sh
 
 ## 情绪分析
 
-todo： 
+进入 **sentiment-data-generator** 文件夹，将微博爬取的数据放入文件夹中，将文件名称存入purify.py和create_data.py的date列表中，运行purify.py后运行create_data.py即可，数据结果在sentiment-data-generator文件夹中。
 
-（注意：数据处理完，存储在哪个位置写一下）
 
 
 

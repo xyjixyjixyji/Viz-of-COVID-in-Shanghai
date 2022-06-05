@@ -14,4 +14,4 @@ for i in date:
         f_.remove('')
     dict = {'text':f_}
     df = pd.DataFrame(dict)
-    df.to_csv('new'+i+'.csv')
+    df.to_csv('purified_data//'+i+'.csv')
