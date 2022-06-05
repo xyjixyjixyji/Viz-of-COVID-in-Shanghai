@@ -55,8 +55,7 @@ python backend.py
 
 
 带颜色的点表示通报的病例，将鼠标悬停在其上可以查看其通报时间，地点和次数：
-
-<img src="D:\Viz-of-COVID-inShanghai\src\static\images\3.png" alt="3" style="zoom:40%;" />
+<img src=".\src\static\images\3.png" alt="4" style="zoom:80%;" />
 
 
 
