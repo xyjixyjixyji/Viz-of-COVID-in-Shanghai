@@ -11,6 +11,10 @@ sh fetch.sh
 ```
 项目代码会自动解析csv文件
 
+## 地图的绘制
+
+在src文件夹下，修改map.py中的decode_file、csv_file的路径到存储的位置后，直接运行即可。最终会生成一个html文件。生成了html文件之后仍需要对html代码进行图例以及样式上的微调，具体要将右上角图例改为时间区间，地图样式修改为:https://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}{r}.png
+
 
 ## 微博评论爬取
 

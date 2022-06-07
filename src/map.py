@@ -25,7 +25,6 @@ def parse_to_dict(csvname, saved_dict):
         reader = csv.reader(f)
         for i, row in enumerate(reader):
             saved_dict[row[0]] = row[1:]
-
 def days_to_string(start_day = "4-1", duration = 40):
     all_days=[]
     current_day = start_day
@@ -71,7 +70,7 @@ def mapping():
 
     all_days = days_to_string("4-1",duration=len(qz["Shanghai"]))
 
-    pudongnew_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    pudongnew_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     pudongnew_charts.add_xaxis(xaxis_data=all_days)
     pudongnew_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["PudongNew"],label_opts = opts.LabelOpts(is_show=False))
     pudongnew_charts.set_global_opts(title_opts = opts.TitleOpts(title="浦东新区每日新增确诊人数", pos_top = "20px"))
@@ -80,7 +79,7 @@ def mapping():
     pudongnew_iframe = branca.element.IFrame(html=pudongnew_html, width=500, height=300)
     pudongnew_popup = folium.Popup(pudongnew_iframe, max_width=500) 
 
-    huangpu_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    huangpu_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     huangpu_charts.add_xaxis(xaxis_data=all_days)
     huangpu_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Huangpu"],label_opts = opts.LabelOpts(is_show=False))
     huangpu_charts.set_global_opts(title_opts = opts.TitleOpts(title="黄浦区每日新增确诊人数", pos_top = "20px"))
@@ -89,7 +88,7 @@ def mapping():
     huangpu_iframe = branca.element.IFrame(html=huangpu_html, width=500, height=300)
     huangpu_popup = folium.Popup(huangpu_iframe, max_width=500) 
     
-    xuhui_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    xuhui_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     xuhui_charts.add_xaxis(xaxis_data=all_days)
     xuhui_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Xuhui"],label_opts = opts.LabelOpts(is_show=False))
     xuhui_charts.set_global_opts(title_opts = opts.TitleOpts(title="徐汇区每日新增确诊人数", pos_top = "20px"))
@@ -98,7 +97,7 @@ def mapping():
     xuhui_iframe = branca.element.IFrame(html=xuhui_html, width=500, height=300)
     xuhui_popup = folium.Popup(xuhui_iframe, max_width=500) 
 
-    changning_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    changning_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     changning_charts.add_xaxis(xaxis_data=all_days)
     changning_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Changning"],label_opts = opts.LabelOpts(is_show=False))
     changning_charts.set_global_opts(title_opts = opts.TitleOpts(title="长宁区每日新增确诊人数", pos_top = "20px"))
@@ -107,7 +106,7 @@ def mapping():
     changning_iframe = branca.element.IFrame(html=changning_html, width=500, height=300)
     changning_popup = folium.Popup(changning_iframe, max_width=500) 
 
-    jingan_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    jingan_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     jingan_charts.add_xaxis(xaxis_data=all_days)
     jingan_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Jingan"],label_opts = opts.LabelOpts(is_show=False))
     jingan_charts.set_global_opts(title_opts = opts.TitleOpts(title="静安区每日新增确诊人数", pos_top = "20px"))
@@ -116,7 +115,7 @@ def mapping():
     jingan_iframe = branca.element.IFrame(html=jingan_html, width=500, height=300)
     jingan_popup = folium.Popup(jingan_iframe, max_width=500) 
 
-    putuo_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    putuo_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     putuo_charts.add_xaxis(xaxis_data=all_days)
     putuo_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Putuo"],label_opts = opts.LabelOpts(is_show=False))
     putuo_charts.set_global_opts(title_opts = opts.TitleOpts(title="普陀区每日新增确诊人数", pos_top = "20px"))
@@ -125,7 +124,7 @@ def mapping():
     putuo_iframe = branca.element.IFrame(html=putuo_html, width=500, height=300)
     putuo_popup = folium.Popup(putuo_iframe, max_width=500) 
 
-    hongkou_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    hongkou_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     hongkou_charts.add_xaxis(xaxis_data=all_days)
     hongkou_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Hongkou"],label_opts = opts.LabelOpts(is_show=False))
     hongkou_charts.set_global_opts(title_opts = opts.TitleOpts(title="虹口区每日新增确诊人数", pos_top = "20px"))
@@ -134,7 +133,7 @@ def mapping():
     hongkou_iframe = branca.element.IFrame(html=hongkou_html, width=500, height=300)
     hongkou_popup = folium.Popup(hongkou_iframe, max_width=500) 
 
-    yangpu_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    yangpu_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     yangpu_charts.add_xaxis(xaxis_data=all_days)
     yangpu_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Yangpu"],label_opts = opts.LabelOpts(is_show=False))
     yangpu_charts.set_global_opts(title_opts = opts.TitleOpts(title="杨浦区每日新增确诊人数", pos_top = "20px"))
@@ -143,7 +142,7 @@ def mapping():
     yangpu_iframe = branca.element.IFrame(html=yangpu_html, width=500, height=300)
     yangpu_popup = folium.Popup(yangpu_iframe, max_width=500) 
 
-    minhang_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    minhang_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     minhang_charts.add_xaxis(xaxis_data=all_days)
     minhang_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Minhang"],label_opts = opts.LabelOpts(is_show=False))
     minhang_charts.set_global_opts(title_opts = opts.TitleOpts(title="闵行区每日新增确诊人数", pos_top = "20px"))
@@ -152,7 +151,7 @@ def mapping():
     minhang_iframe = branca.element.IFrame(html=minhang_html, width=500, height=300)
     minhang_popup = folium.Popup(minhang_iframe, max_width=500) 
 
-    baoshan_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    baoshan_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     baoshan_charts.add_xaxis(xaxis_data=all_days)
     baoshan_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Baoshan"],label_opts = opts.LabelOpts(is_show=False))
     baoshan_charts.set_global_opts(title_opts = opts.TitleOpts(title="宝山区每日新增确诊人数", pos_top = "20px"))
@@ -161,7 +160,7 @@ def mapping():
     baoshan_iframe = branca.element.IFrame(html=baoshan_html, width=500, height=300)
     baoshan_popup = folium.Popup(baoshan_iframe, max_width=500) 
 
-    jiading_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    jiading_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     jiading_charts.add_xaxis(xaxis_data=all_days)
     jiading_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Jiading"],label_opts = opts.LabelOpts(is_show=False))
     jiading_charts.set_global_opts(title_opts = opts.TitleOpts(title="嘉定区每日新增确诊人数", pos_top = "20px"))
@@ -170,7 +169,7 @@ def mapping():
     jiading_iframe = branca.element.IFrame(html=jiading_html, width=500, height=300)
     jiading_popup = folium.Popup(jiading_iframe, max_width=500) 
 
-    jinshan_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    jinshan_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     jinshan_charts.add_xaxis(xaxis_data=all_days)
     jinshan_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Jinshan"],label_opts = opts.LabelOpts(is_show=False))
     jinshan_charts.set_global_opts(title_opts = opts.TitleOpts(title="金山区每日新增确诊人数", pos_top = "20px"))
@@ -179,7 +178,7 @@ def mapping():
     jinshan_iframe = branca.element.IFrame(html=jinshan_html, width=500, height=300)
     jinshan_popup = folium.Popup(jinshan_iframe, max_width=500) 
 
-    songjiang_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    songjiang_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     songjiang_charts.add_xaxis(xaxis_data=all_days)
     songjiang_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Songjiang"],label_opts = opts.LabelOpts(is_show=False))
     songjiang_charts.set_global_opts(title_opts = opts.TitleOpts(title="松江区每日新增确诊人数", pos_top = "20px"))
@@ -188,7 +187,7 @@ def mapping():
     songjiang_iframe = branca.element.IFrame(html=songjiang_html, width=500, height=300)
     songjiang_popup = folium.Popup(songjiang_iframe, max_width=500) 
 
-    qingpu_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    qingpu_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     qingpu_charts.add_xaxis(xaxis_data=all_days)
     qingpu_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Qingpu"],label_opts = opts.LabelOpts(is_show=False))
     qingpu_charts.set_global_opts(title_opts = opts.TitleOpts(title="青浦区每日新增确诊人数", pos_top = "20px"))
@@ -197,7 +196,7 @@ def mapping():
     qingpu_iframe = branca.element.IFrame(html=qingpu_html, width=500, height=300)
     qingpu_popup = folium.Popup(qingpu_iframe, max_width=500) 
 
-    fengxian_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    fengxian_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     fengxian_charts.add_xaxis(xaxis_data=all_days)
     fengxian_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Fengxian"],label_opts = opts.LabelOpts(is_show=False))
     fengxian_charts.set_global_opts(title_opts = opts.TitleOpts(title="奉贤区每日新增确诊人数", pos_top = "20px"))
@@ -206,7 +205,7 @@ def mapping():
     fengxian_iframe = branca.element.IFrame(html=fengxian_html, width=500, height=300)
     fengxian_popup = folium.Popup(fengxian_iframe, max_width=500) 
 
-    chongming_charts = Line(init_opts = opts.InitOpts(width = '400px',height = '300px'))
+    chongming_charts = Line(init_opts = opts.InitOpts(width = '500px',height = '300px'))
     chongming_charts.add_xaxis(xaxis_data=all_days)
     chongming_charts.add_yaxis(series_name = '当日新增确诊人数',y_axis = qz["Chongming"],label_opts = opts.LabelOpts(is_show=False))
     chongming_charts.set_global_opts(title_opts = opts.TitleOpts(title="崇明区每日新增确诊人数", pos_top = "20px"))
@@ -273,24 +272,33 @@ def mapping():
     huangpu = folium.Marker(gps_huangpu,popup=huangpu_popup).add_to(shanghai)
     for i, item in df.iterrows():
         encode = item['addressID']
+        # print(encode)
         decode_gps = decode_address(encode)
+        # print(decode_gps)
         if(decode_gps == None):
             continue
         gps = getGPS(decode_gps)
+        if (gps == None):
+            continue
         gps = list(gps)
         tmp = float(gps[1])
         gps[1] = float(gps[0])
         gps[0] = tmp
         total_day = len(item)-1
         last_report = 15
+        report_times = 0
+        base_radius = 10
+        add_radius = 3
         for j, Item in enumerate(item):
             if j == 0:
                 continue
             if Item == 1:
+                report_times += 1
                 last_report = total_day - j
+        text = folium.Popup((parse_zhch(decode_gps)+"。累计通报次数为%s次，最近一次通报为%s天前。"%(report_times,last_report)),max_width=100)
         if last_report > 14:
             tmp_circle = folium.Circle(location=gps, color=colormap.rgb_hex_str(
-                1/4.0), fill=colormap.rgb_hex_str(1/4.0), radius=100, popup=parse_zhch(decode_gps))
+                1/4.0), fill=colormap.rgb_hex_str(1/4.0), radius=base_radius + add_radius * report_times, popup=text)
             # tmp_circle.add_to(data_15)
             if encode[3:5]=='01':
                 tmp_circle.add_to(PudongNew)
@@ -327,7 +335,7 @@ def mapping():
             # print(1)
         elif last_report <= 14 and last_report > 7:
             tmp_circle = folium.Circle(location=gps, color=colormap.rgb_hex_str(
-                2/4.0), fill=colormap.rgb_hex_str(2/4.0), radius=100, popup=parse_zhch(decode_gps))
+                2/4.0), fill=colormap.rgb_hex_str(2/4.0), radius=base_radius + add_radius * report_times, popup=text)
             # tmp_circle.add_to(data_7_14)
             if encode[3:5]=='01':
                 tmp_circle.add_to(PudongNew)
@@ -363,7 +371,7 @@ def mapping():
                 tmp_circle.add_to(Putuo)
         elif last_report <= 7 and last_report > 1:
             tmp_circle = folium.Circle(location=gps, color=colormap.rgb_hex_str(
-                3/4.0), fill=colormap.rgb_hex_str(3/4.0), radius=100, popup=parse_zhch(decode_gps))
+                3/4.0), fill=colormap.rgb_hex_str(3/4.0), radius=base_radius + add_radius * report_times, popup=text)
             # tmp_circle.add_to(data_1_7)
             if encode[3:5]=='01':
                 tmp_circle.add_to(PudongNew)
@@ -399,7 +407,7 @@ def mapping():
                 tmp_circle.add_to(Putuo)
         else:
             tmp_circle = folium.Circle(location=gps, color=colormap.rgb_hex_str(
-                4/4.0), fill=colormap.rgb_hex_str(4/4.0), radius=100, popup=parse_zhch(decode_gps))
+                4/4.0), fill=colormap.rgb_hex_str(4/4.0), radius=base_radius + add_radius * report_times, popup=text)
             # tmp_circle.add_to(data_1)
             if encode[3:5]=='01':
                 tmp_circle.add_to(PudongNew)
@@ -433,11 +441,11 @@ def mapping():
                 tmp_circle.add_to(Changning)
             elif encode[3:5]=='16':
                 tmp_circle.add_to(Putuo)
-
+        if(i%400==0):
+            # break
+            print(i)
         # print(last_report)
         # print(gps)
-        if (i > 100):
-            break
     Minhang.add_to(shanghai)
     PudongNew.add_to(shanghai)
     Xuhui.add_to(shanghai)
@@ -470,6 +478,5 @@ def mapping():
     os.remove("qingpu_charts.html")
     os.remove("fengxian_charts.html")
     os.remove("chongming_charts.html")
-    shanghai.save("./templates/map.html")
-
+    shanghai.save("test.html")
 mapping()
